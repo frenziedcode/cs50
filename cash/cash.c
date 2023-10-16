@@ -66,12 +66,10 @@ int calculate_quarters(int cents)
 int calculate_dimes(int cents)
 {
     int i = 0;
-    int quarters = 25;
     int dimes = 10;
 
-    if (cents >= 25)
-        calculate_quarters(cents);
-    else if (cents >= 10)
+    calculate_quarters(cents);
+    if (cents >= 10)
     {
         i = 1;
         while ((cents - dimes != 0) && (cents - dimes) >= 10)
@@ -87,15 +85,10 @@ int calculate_dimes(int cents)
 int calculate_nickels(int cents)
 {
     int i = 0;
-    int quarters = 25;
-    int dimes = 10;
     int nickels = 5;
 
-    if (cents >= 25)
-        calculate_quarters(cents);
-    else if (cents >= 10)
-        calculate_dimes(cents);
-    else if (cents >= 5)
+    calculate_dimes(cents);
+    if (cents >= 5)
     {
         i = 1;
         while ((cents - nickels != 0) && (cents - nickels) >= 5)
@@ -111,18 +104,10 @@ int calculate_nickels(int cents)
 int calculate_pennies(int cents)
 {
     int i = 0;
-    int quarters = 25;
-    int dimes = 10;
-    int nickels = 5;
     int pennies = 1;
 
-    if (cents >= 25)
-        calculate_quarters(cents);
-    else if (cents >= 10)
-        calculate_dimes(cents);
-    else if (cents >= 5)
-        calculate_nickels(cents);
-    else if (cents < 5 && cents >= 1)
+    calculate_nickels(cents);
+    if (cents < 5 && cents >= 1)
     {
         i = 1;
         while ((cents - pennies != 0) && (cents - pennies) < 5 && (cents - pennies) >= 1)
