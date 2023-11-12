@@ -33,7 +33,7 @@ int main(int argc, string argv[])
         return 1;
         exit(1);
     }
-    
+
     int wordsize = atoi(argv[1]);
     if (wordsize < 5 || wordsize > 8)
     {
