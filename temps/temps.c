@@ -10,8 +10,7 @@ typedef struct
 {
     string city;
     int temp;
-}
-avg_temp;
+} avg_temp;
 
 avg_temp temps[NUM_CITIES];
 
@@ -53,29 +52,31 @@ int main(void)
 
     printf("\nAverage July Temperatures by City\n\n");
 
-    /*
+    sort_cities();
+
     for (int i = 0; i < NUM_CITIES; i++)
     {
         printf("%s: %i\n", temps[i].city, temps[i].temp);
     }
-    */
-   int count_array = 0;
-   while ( temps[count_array].temp != '\0')
-   {
-        count_array ++;
-   }
-   
-   printf("%d\n", temps[0].temp);
-   printf("%d\n", temps[count_array - 1].temp);
 }
 
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    // Add your code here
-    // Criar uma lista com todos os valores de cada Array dentro da Struct.temp
-    // Comparar usando Merge Sort
-    // imprimir o resultado da Array que está dentro da Struct
+    avg_temp tmp[1];
+    int max_index;
 
+    for (int i = 0; i < NUM_CITIES; i++)
+    {
+        max_index = i;
+        for (int j = i + 1; j < NUM_CITIES; j++)
+        {
+            if (temps[j].temp >= temps[max_index].temp)
+                max_index = j;
+        }
 
+        tmp[0] = temps[i];
+        temps[i] = temps[max_index];
+        temps[max_index] = tmp[0];
+    }
 }
