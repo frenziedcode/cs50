@@ -35,23 +35,25 @@ Why do you think there are different data types in C?
 
 Your program should behave per the examples below.
 
-`half/ $ ./half
+```
+half/ $ ./half
 Bill before tax and tip: 12.50
 Sale Tax Percent: 8.875
 Tip percent: 20
-You will owe $8.17 each!`
+You will owe $8.17 each!
 
-`half/ $ ./half
+half/ $ ./half
 Bill before tax and tip: 23.50
 Sale Tax Percent: 7  
 Tip percent: 15
 You will owe $14.46 each!`
 
-`half/ $ ./half
+half/ $ ./half
 Bill before tax and tip: 100
 Sale Tax Percent: 6.25
 Tip percent: 18
-You will owe $62.69 each!`
+You will owe $62.69 each!
+```
 
 You can check your code using check50, a program that CS50 will use to test your code when you submit, by typing in the following at the $ prompt. But be sure to test it yourself as well!
 
