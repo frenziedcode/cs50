@@ -30,3 +30,21 @@ Why do you need a base case whenever you create a recursive function?
 ## How to Test Your Code
 
 Your program should behave per the examples below.
+
+`atoi/ $ ./atoi
+Enter a positive integer: 3432
+3432`
+
+`atoi/ $ ./atoi
+Enter a positive integer: 98765
+98765`
+
+No `check50` for this one!
+
+To evaluate that the style of your code, type in the following at the `$` prompt.
+
+`style50 atoi.c`
+
+## How to Submit
+
+No need to submit! This is an optional practice problem.
