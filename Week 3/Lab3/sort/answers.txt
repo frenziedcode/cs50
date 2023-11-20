@@ -1,0 +1,21 @@
+
+sort1 uses: Bubble Sort
+
+How do you know?:
+reversed50.000 - 8.200s
+random50.000 - 8.683s
+
+
+ --
+sort2 uses: Merge Sort
+
+How do you know?:
+reversed50.000 - 1.370s
+random50.000 - 1.552s
+
+ --
+sort3 uses: Selection Sort
+
+How do you know?:
+reversed50.000 - 3.570s
+random50.000 - 3.318s
